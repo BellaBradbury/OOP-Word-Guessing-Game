@@ -2,7 +2,7 @@
  * Project 4 - OOP Game App
  * Game.js */
 
-// game class declared
+// GAME CLASS
 class Game {
     constructor() {
         this.missed = 0;
@@ -14,5 +14,12 @@ class Game {
             {phrase: 'I will shine as brightly as the sun'}
         ];
         this.activePhrase = null;
+    }
+
+    // chooses a phrase from phrase arr based on random index number
+    getRandomPhrase() {
+        const indexNumber = Math.floor( Math.random() * this.phrases.length );
+        const randomPhrase = this.phrases[indexNumber].phrase;
+        return new Phrase(randomPhrase);
     }
 } 
