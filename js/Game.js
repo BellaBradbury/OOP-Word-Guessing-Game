@@ -35,17 +35,45 @@ class Game {
 
     // checks if player has revealed all letters
     checkForWin() {
+        const phraseLetters = document.getElementsByClassName('letter');
+        const allLetterArr = Array.from(phraseLetters);
+        const shownLetters = document.getElementsByClassName('show');
+        const shownLetterArr = Array.from(shownLetters);
 
+        return allLetterArr.length === shownLetterArr.length;
     }
 
     // removes life from scoreboard
     removeLife() {
+        const index = 5 - this.missed;
 
+        const heartList = document.getElementsByTagName('ol')[0];
+        const heart = heartList.querySelector(`:nth-child(${index})`);
+        const image = heart.firstChild;
+        image.setAttribute('src', 'images/lostHeart.png');
+
+        this.missed += 1;
+        
+        if (this.missed === 5) {
+            this.gameOver();
+        }
     }
 
     // displays start screen when all lives are lost
-    gameOver() {
-        
+    gameOver(win) {
+        const overlay = document.getElementById('overlay');
+        const message = document.getElementsByClassName('game-over-message');
+        console.log(message);
+
+        if (!win) {
+            overlay.classList.add('lose');
+            message.innerHTML = 'Oh no! You did not win. Would you like to try again?';
+        } else {
+            overlay.classList.add('win');
+            message.innerHTML = 'Great job! You are a winner!';
+        }
+
+        overlay.style.display = 'block';
     }
     
     // handles all methods for app playability

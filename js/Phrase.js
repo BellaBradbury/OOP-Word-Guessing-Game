@@ -15,11 +15,13 @@ class Phrase {
         const letterBoard = document.getElementsByTagName('ul')[0];
 
         letterArr.forEach( (letter) => {
+            let letterClasses = ['hide', 'letter', letter];
+
             const li = document.createElement('li');
             li.innerHTML = letter;
 
             if (letter !== ' ') {
-                li.classList.add('hide', 'letter', letter);
+                li.classList.add(...letterClasses);
             } else {
                 li.classList.add('space');
             }
@@ -29,12 +31,22 @@ class Phrase {
     }
 
     // checks if user letter matches phrase letter
-    checkLetter() {
-
+    checkLetter = (input) => {
+        console.log(input);
+        return this.phrase.includes(input);
     }
 
     // reveals matching phrase letter to user input
-    showMatchedLetter() {
-        
+    showMatchedLetter = (input) => {
+        const phraseLetters = document.getElementsByClassName('letter');
+        const letterArr = Array.from(phraseLetters);
+
+        letterArr.forEach( (letter) => {
+            if ( input === letter.innerHTML.toLowerCase() ) {
+                console.log(letter);
+                letter.classList.remove('hide');
+                letter.classList.add('show');
+            }
+        });
     }
 } 
