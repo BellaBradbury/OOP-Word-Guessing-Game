@@ -76,7 +76,7 @@ class Game {
     }
     
     // handles all methods for app playability
-    handleInteraction() {
-
+    handleInteraction(input) {
+        console.log(input);
     }
 } 
