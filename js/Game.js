@@ -33,4 +33,23 @@ class Game {
         this.activePhrase.addPhraseToDisplay();
     }
 
+    // checks if player has revealed all letters
+    checkForWin() {
+
+    }
+
+    // removes life from scoreboard
+    removeLife() {
+
+    }
+
+    // displays start screen when all lives are lost
+    gameOver() {
+        
+    }
+    
+    // handles all methods for app playability
+    handleInteraction() {
+
+    }
 } 

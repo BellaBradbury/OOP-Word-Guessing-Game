@@ -27,4 +27,14 @@ class Phrase {
             letterBoard.appendChild(li);
         });
     }
+
+    // checks if user letter matches phrase letter
+    checkLetter() {
+
+    }
+
+    // reveals matching phrase letter to user input
+    showMatchedLetter() {
+        
+    }
 } 
