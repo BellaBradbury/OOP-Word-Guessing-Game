@@ -4,6 +4,7 @@
 
 // GAME CLASS
 class Game {
+    // create and initialize 'missed', 'phrases', & 'activePhrase' objects
     constructor() {
         this.missed = 0;
         this.phrases = [

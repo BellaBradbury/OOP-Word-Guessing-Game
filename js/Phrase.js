@@ -2,9 +2,12 @@
  * Project 4 - OOP Game App
  * Phrase.js */
 
-// prase class declared
+// PHRASE CLASS
 class Phrase {
+    // create and initialize 'phrase' object
     constructor(phrase) {
         this.phrase = phrase;
     }
+
+
 } 
