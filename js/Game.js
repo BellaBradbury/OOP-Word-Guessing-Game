@@ -62,8 +62,7 @@ class Game {
     // displays start screen when all lives are lost
     gameOver(win) {
         const overlay = document.getElementById('overlay');
-        const message = document.getElementsByClassName('game-over-message');
-        console.log(message);
+        const message = document.getElementById('game-over-message');
 
         if (!win) {
             overlay.classList.add('lose');
@@ -73,7 +72,7 @@ class Game {
             message.innerHTML = 'Great job! You are a winner!';
         }
 
-        overlay.style.display = 'block';
+        overlay.style.display = 'flex';
     }
     
     // handles all methods for app playability
