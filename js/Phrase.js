@@ -9,5 +9,22 @@ class Phrase {
         this.phrase = phrase;
     }
 
+    // adds placeholder letters to gameboard upon start
+    addPhraseToDisplay() {
+        const letterArr = this.phrase.split('');
+        const letterBoard = document.getElementsByTagName('ul')[0];
 
+        letterArr.forEach( (letter) => {
+            const li = document.createElement('li');
+            li.innerHTML = letter;
+
+            if (letter !== ' ') {
+                li.classList.add('hide', 'letter', letter);
+            } else {
+                li.classList.add('space');
+            }
+
+            letterBoard.appendChild(li);
+        });
+    }
 } 
