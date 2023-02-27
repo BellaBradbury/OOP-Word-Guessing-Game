@@ -23,4 +23,13 @@ class Game {
         const randomPhrase = this.phrases[indexNumber].phrase;
         return new Phrase(randomPhrase);
     }
+
+    // hides overlay, sets phrase, & displays gameboard
+    startGame() {
+        const overlay = document.getElementById('overlay');
+        overlay.style.display = 'none';
+
+        this.activePhrase = this.getRandomPhrase();
+        this.activePhrase.addPhraseToDisplay();
+    }
 } 
