@@ -8,11 +8,11 @@ class Game {
     constructor() {
         this.missed = 0;
         this.phrases = [
-            {phrase: 'my great adventure has begun'},
-            {phrase: 'some things are meant to be'},
-            {phrase: 'do not try to make me grow up before my time'},
-            {phrase: 'i have lived for loving you'},
-            {phrase: 'i will shine as brightly as the sun'}
+            new Phrase('my great adventure has begun'),
+            new Phrase('some things are meant to be'),
+            new Phrase('do not try to make me grow up before my time'),
+            new Phrase('i have lived for loving you'),
+            new Phrase('i will shine as brightly as the sun')
         ];
         this.activePhrase = null;
     }
