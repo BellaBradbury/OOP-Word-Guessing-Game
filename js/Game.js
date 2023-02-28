@@ -77,6 +77,16 @@ class Game {
     
     // handles all methods for app playability
     handleInteraction(input) {
-        console.log(input);
+        input.setAttribute('disabled', 'true');
+        if ( this.activePhrase.checkLetter(input.innerHTML) ) {
+            input.classList.add('chosen');
+            this.activePhrase.showMatchedLetter(input.innerHTML);
+            if ( this.checkForWin() ) {
+                this.gameOver(true);
+            }
+        } else {
+            input.classList.add('wrong');
+            this.removeLife();
+        }
     }
 } 

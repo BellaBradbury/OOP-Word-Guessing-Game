@@ -32,7 +32,6 @@ class Phrase {
 
     // checks if user letter matches phrase letter
     checkLetter = (input) => {
-        console.log(input);
         return this.phrase.includes(input);
     }
 
@@ -43,7 +42,6 @@ class Phrase {
 
         letterArr.forEach( (letter) => {
             if ( input === letter.innerHTML.toLowerCase() ) {
-                console.log(letter);
                 letter.classList.remove('hide');
                 letter.classList.add('show');
             }
