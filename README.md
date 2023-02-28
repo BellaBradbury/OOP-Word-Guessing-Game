@@ -1,7 +1,7 @@
 # OOP Game Show App
 
 Team Treehouse - Full Stack JavaScript TechDegree - Project 4
-    - Submitted 00/00/00 ***IN REVIEW***
+    - Submitted 02/27/23 ***EXCEEDS EXPECTATIONS***
 
 -SKILLS USED-
 * JavaScript
