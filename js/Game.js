@@ -28,6 +28,10 @@ class Game {
     startGame() {
         const overlay = document.getElementById('overlay');
         overlay.style.display = 'none';
+        
+        if (this.missed === 5) {
+            this.gameOver();
+        }        
 
         this.activePhrase = this.getRandomPhrase();
         this.activePhrase.addPhraseToDisplay();
@@ -73,6 +77,25 @@ class Game {
         }
 
         overlay.style.display = 'flex';
+
+        // reset game
+        const phraseLetters = document.getElementsByTagName('ul')[0].innerHTML = '';
+
+        const keyButtons = document.getElementsByClassName('key');
+        const keyArray = Array.from(keyButtons);
+        keyArray.forEach( (key) => {
+            key.classList.remove('chosen', 'wrong');
+            key.classList.add('key');
+            key.removeAttribute('disabled');
+        });
+
+        const heartList = document.getElementsByTagName('ol')[0].children;
+        const heartArr = Array.from(heartList);
+        heartArr.forEach( (heart) => {
+            const image = heart.firstChild;
+            image.setAttribute('src', 'images/liveHeart.png');
+            return image;
+        });
     }
     
     // handles all methods for app playability
