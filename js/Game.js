@@ -8,11 +8,11 @@ class Game {
     constructor() {
         this.missed = 0;
         this.phrases = [
-            {phrase: 'My great adventure has begun'},
-            {phrase: 'Some things are meant to be'},
-            {phrase: 'Do not try to make me grow up before my time'},
-            {phrase: 'I have lived for loving you'},
-            {phrase: 'I will shine as brightly as the sun'}
+            {phrase: 'my great adventure has begun'},
+            {phrase: 'some things are meant to be'},
+            {phrase: 'do not try to make me grow up before my time'},
+            {phrase: 'i have lived for loving you'},
+            {phrase: 'i will shine as brightly as the sun'}
         ];
         this.activePhrase = null;
     }
@@ -70,9 +70,11 @@ class Game {
 
         if (!win) {
             overlay.classList.add('lose');
+            overlay.classList.remove('win');
             message.innerHTML = 'Oh no! You did not win. Would you like to try again?';
         } else {
             overlay.classList.add('win');
+            overlay.classList.remove('lose');
             message.innerHTML = 'Great job! You are a winner!';
         }
 
