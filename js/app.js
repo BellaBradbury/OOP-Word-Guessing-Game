@@ -3,7 +3,7 @@
  * app.js */
 
 // VARIABLES
-var game;
+let game;
 const startButton = document.getElementById('btn__reset');
 const keyButtons = document.getElementsByClassName('key');
 const keyArray = Array.from(keyButtons);

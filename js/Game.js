@@ -24,7 +24,7 @@ class Game {
         return new Phrase(randomPhrase);
     }
 
-    // hides overlay, sets phrase, & displays gameboard
+    // hides overlay, sets phrase, & displays game board
     startGame() {
         const overlay = document.getElementById('overlay');
         overlay.style.display = 'none';
@@ -81,8 +81,6 @@ class Game {
         overlay.style.display = 'flex';
 
         // reset game
-        const phraseLetters = document.getElementsByTagName('ul')[0].innerHTML = '';
-
         const keyButtons = document.getElementsByClassName('key');
         const keyArray = Array.from(keyButtons);
         keyArray.forEach( (key) => {

@@ -9,7 +9,7 @@ class Phrase {
         this.phrase = phrase;
     }
 
-    // adds placeholder letters to gameboard upon start
+    // adds placeholder letters to game board upon start
     addPhraseToDisplay() {
         const letterArr = this.phrase.split('');
         const letterBoard = document.getElementsByTagName('ul')[0];
